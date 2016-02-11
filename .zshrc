@@ -1,5 +1,5 @@
 function powerline_precmd() {
-    PS1="$(~/powerline-shell/powerline-shell.py $? --mode compatible --shell zsh 2> /dev/null)"
+    PS1="$(~/powerline-shell.py $? --mode compatible --shell zsh 2> /dev/null)"
 }
 
 function install_powerline_precmd() {
