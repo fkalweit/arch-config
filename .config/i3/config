@@ -231,4 +231,5 @@ exec compton
 exec spotify
 exec atom
 exec firefox
+exec --no-startup-id dropbox-cli start 
 exec_always feh --bg-scale /home/fabian/Bilder/wallpaper1.jpg
