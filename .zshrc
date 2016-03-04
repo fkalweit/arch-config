@@ -10,6 +10,12 @@ setopt    appendhistory     #Append history to the history file (no overwriting)
 setopt    sharehistory      #Share history across terminals
 setopt    incappendhistory  #Immediately append to the history file, not just when a term is killed
 
+bindkey '^R' history-incremental-search-backward
+
+bindkey "^[[A" history-search-backward
+
+bindkey "^[[B" history-search-forward
+
 #cmd line powerline conf
 
 function powerline_precmd() {
