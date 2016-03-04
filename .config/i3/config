@@ -98,7 +98,7 @@ bindsym $mod+a focus parent
 set $workspace1 "1  Termianls"
 set $workspace2 "2  FireFox"
 set $workspace3 "3  Editor"
-set $workspace4 "4"
+set $workspace4 "4  Files"
 set $workspace5 "5"
 set $workspace6 "6"
 set $workspace7 "7"
@@ -133,6 +133,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 
 assign [class="Firefox"] $workspace2
 assign [class="Atom"] $workspace3
+assign [class="Nemo"] $workspace4
 assign [class="Thunderbird"] $workspace9
 #assign [class="Spotify"] $workspace10
 
@@ -230,6 +231,8 @@ bindsym XF86AudioPrev exec playerctl previous
 exec compton
 exec spotify
 exec atom
-exec firefox
-exec --no-startup-id dropbox-cli start 
+exec firefox-aurora
+exec nemo --no-desktop
+exec thunderbird
+exec --no-startup-id dropbox-cli start
 exec_always feh --bg-scale /home/fabian/Bilder/wallpaper1.jpg
