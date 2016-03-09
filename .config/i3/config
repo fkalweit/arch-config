@@ -173,6 +173,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# color def
 
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
@@ -182,17 +183,17 @@ set $urgent-bg-color     #E53935
 
 # window colors
 #                       border                       background                     text                 indicator
-client.focused          $bg-color                    $bg-color                      $text-color          #00ff00
-client.unfocused        $inactive-bg-color           $inactive-bg-color             $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color           $inactive-bg-color             $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color             $urgent-bg-color               $text-color          #00ff00
+client.focused          $bg-color                    $bg-color                      $text-color          #808080
+client.unfocused        $inactive-bg-color           $inactive-bg-color             $inactive-text-color #808080
+client.focused_inactive $inactive-bg-color           $inactive-bg-color             $inactive-text-color #808080
+client.urgent           $urgent-bg-color             $urgent-bg-color               $text-color          #808080
 
 # bar
 bar {
     strip_workspace_numbers yes
+    tray_output primary
   	status_command i3blocks -c "$HOME/.config/i3/i3blocks.conf"
     #status_command i3status
-    tray_output primary
 	colors {
 		background $bg-color
 	    	separator #757575
@@ -206,7 +207,7 @@ bar {
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-
+# openbox logout
 bindsym $mod+shift+x exec "$HOME/.config/i3/scripts/lock.sh"
 bindsym $mod+Escape exec oblogout
 #bindsym $mod+Escape exec ~/.i3/scripts/i3_exit
@@ -238,4 +239,4 @@ exec firefox-aurora
 exec nemo --no-desktop
 exec thunderbird
 exec --no-startup-id dropbox-cli start
-exec_always feh --bg-scale /home/fabian/Bilder/wallpaper1.jpg
+exec_always feh --bg-scale ~/.config/i3/wallpaper.jpg
