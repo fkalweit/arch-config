@@ -73,9 +73,9 @@ if ($acpi =~ /(\d\d:\d\d):/) {
 		print "$short_text\n";
 		print "#A8FF00\n";
 	} elsif ($percent > 95) {
-	print " $full_text\n";
-	print "$short_text\n";
-	print "#A8FF00\n";
+		print " $full_text\n";
+		print "$short_text\n";
+		print "#A8FF00\n";
 }
 	if ($percent < 5) {
 		exit(33);

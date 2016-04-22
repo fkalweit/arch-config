@@ -30,7 +30,7 @@ while (<$fh>) {
             ## If the volume os greater than or equal to the
             ## value passed, print "y"
             if ($volume >= $volume_limit) {
-               print "y\n";
+                print "y\n";
                 exit 0;
             }
             else {

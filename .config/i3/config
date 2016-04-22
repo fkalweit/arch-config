@@ -30,7 +30,7 @@ font pango:System San Francisco Display 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec terminator
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -102,7 +102,7 @@ set $workspace4 "4  Files"
 set $workspace5 "5"
 set $workspace6 "6"
 set $workspace7 "7"
-set $workspace8 "8"
+set $workspace8 "8  Windows"
 set $workspace9 "9  Mail"
 set $workspace10 "10  Musik"
 
@@ -231,6 +231,10 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+for_window [class="Tk"] floating enable
+for_window [class="kde5-nm-connection-editor"] floating enable
+for_window [class="Gnome-calendar"] floating enable
+
 
 exec compton
 exec spotify
@@ -238,5 +242,6 @@ exec atom
 exec firefox-aurora
 exec nemo --no-desktop
 exec thunderbird
+exec lightscreen
 exec --no-startup-id dropbox-cli start
 exec_always feh --bg-scale ~/.config/i3/wallpaper.jpg
