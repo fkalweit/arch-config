@@ -192,7 +192,8 @@ client.urgent           $urgent-bg-color             $urgent-bg-color           
 bar {
     strip_workspace_numbers yes
     tray_output primary
-  	status_command i3blocks -c "$HOME/.config/i3/i3blocks.conf"
+    #position top
+    status_command i3blocks -c "$HOME/.config/i3/i3blocks.conf"
     #status_command i3status
 	colors {
 		background $bg-color
@@ -239,7 +240,7 @@ for_window [class="Gnome-calendar"] floating enable
 exec compton
 exec spotify
 exec atom
-exec firefox-aurora
+exec firefox
 exec nemo --no-desktop
 exec thunderbird
 exec lightscreen
