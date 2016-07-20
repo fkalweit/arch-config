@@ -5,6 +5,15 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+hide_edge_borders both
+new_window none
+smart_borders on
+smart_gaps on
+
+gaps inner 10
+gaps outer 5
+
+
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -192,7 +201,7 @@ client.urgent           $urgent-bg-color             $urgent-bg-color           
 bar {
     strip_workspace_numbers yes
     tray_output primary
-    #position top
+    position top
     status_command i3blocks -c "$HOME/.config/i3/i3blocks.conf"
     #status_command i3status
 	colors {
@@ -236,7 +245,8 @@ for_window [class="Tk"] floating enable
 for_window [class="kde5-nm-connection-editor"] floating enable
 for_window [class="Gnome-calendar"] floating enable
 
-
+exec_always feh --bg-scale ~/.config/i3/wallpaper.jpg
+#exec_always conky -c ~/conkyrc | i3-wsbar -c "dzen2 -dock -h 18 -w 1024 -ta l -fn '123-9'" --show-all
 exec compton
 exec spotify
 exec atom
@@ -245,4 +255,4 @@ exec nemo --no-desktop
 exec thunderbird
 exec lightscreen
 exec --no-startup-id dropbox-cli start
-exec_always feh --bg-scale ~/.config/i3/wallpaper.jpg
+exec_always --no-startup-id conky -c ~/.conkyrc
