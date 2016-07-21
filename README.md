@@ -8,7 +8,7 @@ As default shell I am using zsh with powerline.
 
 conky + urxvt:
 
-
+![screenshot 12](https://cloud.githubusercontent.com/assets/9308836/17023027/885004f4-4f51-11e6-93ad-a61a3d9a358e.jpg)
 
 openbox logout:
 
