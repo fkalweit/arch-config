@@ -56,13 +56,20 @@ xftfont Freesans:pixelsize=9
 # ${image /home/fabian/.conky/conkybg1.png -p -1,-20 -s 200x360}
 
 TEXT
-${image /home/fabian/.conky/conkybg1.png -p -1,-20 -s 250x600}
+${image /home/fabian/.conky/conkybg1.png -p -1,-20 -s 280x700}
+
+
 
 ${font Zegoe UI:size=12}${color #ffd800}DATE
 ${font pftempestafivecondensed:size=8}${color #ffffff}${time %H:%M:%S}
 ${time  %B %d, %Y}
 
-
+${font Zegoe UI:size=12}${color #ffd800}CPU ${freq_g (1)}GHz
+${font pftempestafivecondensed:size=8}${color white}
+cpu0 ${cpugraph cpu0 25,100}
+cpu1 ${cpugraph cpu1 25,100}
+cpu2 ${cpugraph cpu2 25,100}
+cpu3 ${cpugraph cpu3 25,100}
 
 ${font Zegoe UI:size=12}${color #ffd800}SYSTEM
 ${font pftempestafivecondensed:size=8}${color #ffffff}Uptime: $uptime_short
@@ -74,11 +81,24 @@ Filesystem: ${fs_used /}
 ${fs_bar 4,80 /}
 
 
+#${font Zegoe UI:size=12}${color #ffd800}NETWORK
+#${font pftempestafivecondensed:size=8}${color #ffffff}Signal: ${wireless_link_qual wlp2s0}%
+#${wireless_link_bar 4,80 wlp2s0}
+#Ul: ${upspeed wlp2s0} kb/s
+#${upspeedgraph wlp2s0 4,80 000000 000000}
+#Dl: ${downspeed wlp2s0} kb/s
+#${downspeedgraph wlp2s0 4,80 000000 000000}
 
-${font Zegoe UI:size=12}${color #ffd800}NETWORK
-${font pftempestafivecondensed:size=8}${color #ffffff}Signal: ${wireless_link_qual wlan0}%
-${wireless_link_bar 4,80 wlan0}
-Ul: ${upspeed wlan0} kb/s
-${upspeedgraph wlan0 4,80 000000 000000}
-Dl: ${downspeed wlan0} kb/s
-${downspeedgraph wlan0 4,80 000000 000000}
+
+#${voffset -19}
+#${cpugraph cpu1 50,150}${cpugraph cpu2 50,150}${voffset -19}
+#${cpugraph cpu3 50,150}${cpugraph cpu4 50,150}
+#${font Ubuntu:size=10}${voffset -110}${color3}${goto 10}1 ${goto 160}2 ${goto 0} ${voffset 50} ${goto 10}3 ${goto 160}4
+#${font Ubuntu:size=8}${voffset -67}${color3}${goto 108}${freq_g (1)}GHz ${goto 258}${freq_g (2)}GHz ${goto 0}${voffset 50}${goto 108}${freq_g (3)}GHz ${goto 258}${freq_g (4)}GHz
+
+#CPU ${cpu cpu0}% ${cpubar cpu0 4,80}
+
+# IPv4 global:
+# ${execi 7200 wget http://v4.ipv6-test.com/api/myip.php -q -O -}
+# IPv4 local:
+# ${addr enp3s0} ${offset 10}
