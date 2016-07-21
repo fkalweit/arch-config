@@ -6,6 +6,10 @@ As default shell I am using zsh with powerline.
 
 ![screenshot 2016-03-08-13 28 39](https://cloud.githubusercontent.com/assets/9308836/13601714/4a73d8c4-e532-11e5-8203-4695ee3832e6.jpg)
 
+conky + urxvt:
+
+![screenshot 12](https://cloud.githubusercontent.com/assets/9308836/17023027/885004f4-4f51-11e6-93ad-a61a3d9a358e.jpg)
+
 openbox logout:
 
 ![screenshot 2016-03-08-13 31 37](https://cloud.githubusercontent.com/assets/9308836/13601715/4a75035c-e532-11e5-81d5-4145c164987c.jpg)
