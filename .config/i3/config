@@ -39,7 +39,8 @@ font pango:System San Francisco Display 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+#bindsym $mod+Return exec terminator
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -219,21 +220,21 @@ client.focused_inactive $inactive-bg-color           $inactive-bg-color         
 client.urgent           $urgent-bg-color             $urgent-bg-color               $text-color          #808080
 
 # bar
-bar {
-    strip_workspace_numbers yes
-    tray_output primary
-    position top
-    status_command i3blocks -c "$HOME/.config/i3/i3blocks.conf"
-    #status_command i3status
-	colors {
-		background $bg-color
-	    	separator #757575
-		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-	}
-}
+#bar {
+#    strip_workspace_numbers yes
+#    tray_output primary
+#    position top
+#    status_command i3blocks -c "$HOME/.config/i3/i3blocks.conf"
+#    #status_command i3status
+#	colors {
+#		background $bg-color
+#	    	separator #757575
+#		#                  border             background         text
+#		focused_workspace  $bg-color          $bg-color          $text-color
+#		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#	}
+#}
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -266,7 +267,9 @@ for_window [class="Tk"] floating enable
 for_window [class="kde5-nm-connection-editor"] floating enable
 for_window [class="Gnome-calendar"] floating enable
 
-exec_always feh --bg-scale ~/.config/i3/wallpaper.jpg
+exec_always feh --bg-scale ~/.config/i3/wallpaper2.jpg
+exec --no-startup-id xfce4-panel --disable-wm-check
+exec nm-applet
 #exec_always conky -c ~/conkyrc | i3-wsbar -c "dzen2 -dock -h 18 -w 1024 -ta l -fn '123-9'" --show-all
 exec compton
 exec spotify
@@ -274,6 +277,6 @@ exec atom
 exec firefox
 exec nemo --no-desktop
 exec thunderbird
-exec lightscreen
+exec --no-startup-id lightscreen
 exec --no-startup-id dropbox-cli start
-exec_always --no-startup-id conky -c ~/.conkyrc
+exec --no-startup-id conky -c ~/.conkyrc
