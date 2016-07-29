@@ -29,7 +29,12 @@ URxvt.lineSpace:            0
 ! Fonts
 URxvt.allow_bold:           false
 /* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-URxvt*font: xft:Roboto Mono:pixelsize=14
+URxvt*font: xft:Roboto Mono:pixelsize=14, \
+	    xft:Liberation Mono:size=10:antialias=false, \
+	    xft:DejaVu Sans Mono:style=Book:antialias=false:size=8, \
+            xft:WenQuanYi Bitmap Song:size=8, \
+            xft:FreeSerif:style=Regular, \
+            xft:unifont:style=Medium:antialias=false
 URxvt*boldFont: xft:Roboto Mono:pixelsize=14
 
 ! Fix font space
