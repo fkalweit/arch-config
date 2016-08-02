@@ -1,0 +1,15 @@
+[user]
+	email = fabiankalweit@yahoo.de
+	name = Fabian Kalweit
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	s = status
+[core]
+	editor = vim
+[merge]
+  tool = p4merge
+[mergetool "extMerge"]
+  cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+  trustExitCode = false
+[diff]
+  external = p4merge
