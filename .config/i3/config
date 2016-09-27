@@ -266,6 +266,7 @@ bindsym XF86AudioPrev exec playerctl previous
 for_window [class="Tk"] floating enable
 for_window [class="kde5-nm-connection-editor"] floating enable
 for_window [class="Gnome-calendar"] floating enable
+for_window [class="telegram"] floating enable
 
 exec_always feh --bg-scale ~/.config/i3/wallpaper2.jpg
 exec --no-startup-id xfce4-panel --disable-wm-check
