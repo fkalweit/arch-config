@@ -35,6 +35,7 @@ if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
 
+export PATH="$PATH:/opt/rstudio-1.0.136/bin"
 
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
